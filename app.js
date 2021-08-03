@@ -14,7 +14,7 @@ var app = express();
 var handlebars = require('express-handlebars');
 
 var bodyParser = require('body-parser');
-
+app.use(express.static(path.join(__dirname, '/views')));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
